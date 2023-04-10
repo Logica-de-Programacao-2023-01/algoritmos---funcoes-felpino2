@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main() {
+	slice := []int{4, 5, 6}
+	resultado := médiaarit(slice)
+	fmt.Println(resultado)
+}
+func médiaarit(slice []int) int {
+	resultado := 0
+	for _, numeros := range slice {
+		resultado += numeros
+	}
+	return resultado / 3
+}
