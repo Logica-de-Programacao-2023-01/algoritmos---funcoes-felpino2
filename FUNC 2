@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	palavra := "palavra"
+	qntdvogais := vogais(palavra)
+	fmt.Println(qntdvogais)
+}
+func vogais(palavra string) int {
+	vogais := "aeiou"
+	soma := 0
+	for _, letras := range palavra {
+		if strings.ContainsRune(vogais, letras) {
+			soma++
+		}
+	}
+	return soma
+}
