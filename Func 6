@@ -1,0 +1,19 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	palavras := []string{"Olá", ", ", "tenha um bom-dia"}
+	fmt.Print(valorigual(palavras))
+}
+
+func valorigual(palavras []string) string {
+	var juntador string
+	for _, passe := range palavras {
+		juntador += string(passe)
+	}
+	return strings.ReplaceAll(juntador, " ", ",")
+}
