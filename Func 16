@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	string1 := "macacos"
+	fmt.Print(vogais(string1))
+}
+func vogais(string1 string) string {
+	for _, acessostring1 := range string1 {
+		if strings.ContainsAny(string(acessostring1), "aeiou") {
+			stringfinal := strings.NewReplacer("a", "*", "e", "*", "i", "*", "o", "*", "u", "*")
+			string1 = stringfinal.Replace(string1)
+		}
+	}
+	return string1
+}
